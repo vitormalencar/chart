@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#range-container {
+  margin: 200px 0px 0px 100px;
+}
+
+#current-year {
+  height: 60px;
+  transform: translateY(-70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  color: black;
+}
+
+#range {
+  transform: translateX(-60px);
+  width: 440px;
+  padding: 0px;
+  background-color: #e1e1e1;
+  height: 20px;
+  z-index: 10;
+}
+
+#svg {
+  z-index: -1;
+  width: 435px;
+  height: 5px;
+  position: absolute;
+  overflow: visible;
+  /*   left: 25px; */
+  top: -10px;
+}
+
+input[type=range] {
+  transform: translateY(-60px);
+  -webkit-appearance: none;
+  width: 431px;
+  margin: 0px;
+  margin-left: 5px;
+  background-color: blue;
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border:1px solid black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -15.5px;
+}
+
+.grid line {
+  stroke: #FFF;
+}
+
+.grid .minor line {
+  stroke-opacity: .5;
+}
+
+.grid text {
+  display: none;
+}
+
+.axis path,
+.grid path {
+  display: none;
+}
+
+.axis.date {
+  font-size: 12px;
+  font-family: "Helvetica", Arial, sans-serif;
+  overflow: show;
+}
+
+.grid g line {
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.axis.date text {
+  fill: black;
+}
+
+#tolltip{
+  position: absolute;
+}
